@@ -6,8 +6,8 @@ set(CMAKE_C_STANDARD 23)
 include_directories(include)
 
 add_executable(tbrew
-    src/main.c
-    src/main.c
+    src/tbrew.c
+    src/tbrew.c
     src/vec.c
     src/client.c
     include/client.h
@@ -15,4 +15,6 @@ add_executable(tbrew
     include/language.h
     include/parcel.h
     include/vec.h
+    include/tbrew.h
+    include/messages.h
 )

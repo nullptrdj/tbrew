@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include <vec.h>
 
 Vec *new_vec(const int element_size) {
@@ -12,7 +13,7 @@ Vec *new_vec(const int element_size) {
 }
 
 void *vec_gets(const Vec *vec, const int index) {
-    return &vec->ptr[index];
+    return vec->ptr[index];
 }
 
 void *vec_puts(Vec *vec, const void *ptr) {
@@ -20,7 +21,7 @@ void *vec_puts(Vec *vec, const void *ptr) {
     vec->ptr[vec->size] = malloc(vec->offset);
     memmove(vec->ptr[vec->size], ptr, vec->offset);
     vec->size++;
-    return vec->ptr[vec->size];
+    return vec->ptr[vec->size-1];
 }
 
 void vec_delete(Vec *vec, const int index) {
