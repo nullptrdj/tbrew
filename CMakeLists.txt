@@ -3,8 +3,8 @@ project(tbrew C)
 
 set(CMAKE_C_STANDARD 23)
 set(CMAKE_CXX_FLAGS "-Wall -Wextra")
-set(CMAKE_CXX_FLAGS "-g")
-set(CMAKE_CXX_FLAGS "-O3")
+set(CMAKE_CXX_FLAGS_DEBUG "-g")
+set(CMAKE_CXX_FLAGS_RELEASE "-O2")
 
 include_directories(include)
 

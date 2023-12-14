@@ -33,9 +33,7 @@ void *listen_critical(void *args) {
     message_out(client->fd, client->sesid, 37, m_uuid);
     client->logged_in = true;
 
-    for (;;) {
-        // TODO: TCP event loop
-    }
+    return 0;
 }
 
 ssize_t message_out(const uint16_t fd, const char *message, const uint16_t size, const Messages type) {
