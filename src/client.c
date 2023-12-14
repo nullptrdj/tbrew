@@ -21,7 +21,7 @@ void *listen_critical(void *args) {
     const uint8_t len = recv(client->fd, buffer, sizeof(buffer), 0);
     if (len != sizeof(Login)) {
         perror("Client sent corrupt login");
-        return nullptr;
+        return 0;
     }
 
     // Gen UUID

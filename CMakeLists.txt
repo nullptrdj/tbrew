@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.27)
 project(tbrew C)
 
 set(CMAKE_C_STANDARD 23)
+set(CMAKE_CXX_FLAGS "-Wall -Wextra")
+set(CMAKE_CXX_FLAGS "-g")
+set(CMAKE_CXX_FLAGS "-O3")
 
 include_directories(include)
 
